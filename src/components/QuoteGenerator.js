@@ -4,9 +4,9 @@ const quoteWrap = document.querySelector("#quoteWrap");
 
 const quote = document.querySelector('#quote');
 const author = document.querySelector('#author');
-const boon = document.querySelector('#btn');
+// const boon = document.querySelector('#btn');
 
-quoteWrap.addEventListener('click', getQuote);
+// quoteWrap.addEventListener('click', getQuote);
 
 
 const QuoteGenerator = () => (
