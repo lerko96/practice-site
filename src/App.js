@@ -1,19 +1,16 @@
 import './App.scss';
-import QuoteGenerator from './components/QuoteGenerator.js';
-import TaskManager from './components/TaskManager';
 import Header from './components/Header';
+import TaskManager from './components/TaskManager';
 
 function App() {
-  const name = 'tyler'
+  
 
-  return (
-    <div className="App">
-      <Header />
-      <TaskManager />
-      {/* <h1>hello {name} from react</h1> */}
-      {/* <QuoteGenerator /> */}
-    </div>
-  );
+	return (
+		<div className='wrapper'>
+			<Header />
+			<TaskManager />
+		</div>
+	);
 }
 
 export default App;
