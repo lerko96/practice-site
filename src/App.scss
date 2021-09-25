@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+$color-blue: red;
+$font-xlarge: "60px";
+
+p {
+    color: $color-blue;
+    font-size: $font-xlarge;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
