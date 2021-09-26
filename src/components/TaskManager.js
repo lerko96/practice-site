@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import Tasks from './Tasks';
 import AddTask from './AddTask';
-import Button from './Button';
-import Header from './Header';
+// import Button from './Button';
+// import Header from './Header';
 import TaskHeader from './TaskHeader';
 
 const TaskManager = ({ title }) => {

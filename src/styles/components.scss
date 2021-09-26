@@ -4,16 +4,16 @@
 	margin: 5px;
 	border-radius: 10px;
 	border: 1px solid grey;
-    background: #000;
+	background: #000;
 	color: white;
 	font-size: 15px;
 	font-family: inherit;
 }
 
 .btn-block {
-    display: block;
-    width: 100%;
-  }
+	display: block;
+	width: 100%;
+}
 
 .taskManager {
 	width: 500px;
@@ -81,4 +81,14 @@
 }
 
 .task.reminder {
+}
+
+.expense-tracker {
+	border: 1px solid yellow;
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+	margin: 0 auto;
+	h2 {
+	}
 }
