@@ -1,23 +1,29 @@
 import './App.scss';
-import Header from './components/Header';
-import TaskManager from './components/TaskManager';
-import ExpenseTracker from './components/expense/ExpenseTracker';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './components/Home/Home';
+import Tools from './components/tools/Tools';
+import TaskManager from './components/tools/toDoList/TaskManager';
+import ExpenseTracker from './components/tools/expense/ExpenseTracker';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
 	return (
 		<Router>
 			<div className='wrapper'>
-				<Header />
+				<Navbar />
 				<div className='content'>
 					<Switch>
-						<Route path='/'></Route>
-						<Route path='/todolist'>
-							<TaskManager />
+						<Route path='/'>
+							<Home />
+							<Tools />
+						</Route>
+						<Route path='/tools'>
+							<Tools />
 						</Route>
 					</Switch>
 				</div>
-				<ExpenseTracker />
+				<Footer />
 			</div>
 		</Router>
 	);
