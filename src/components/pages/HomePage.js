@@ -1,13 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import ProjectList from '../ProjectList';
+import ToolsList from './ToolPage';
 
-function Home() {
-	// const name = 'Tyler';
+const HomePage = () => {
 	const [name, setName] = useState('lerko');
-
 
 	const handleClick = () => {
 		setName('luigi');
 	};
+
+	const [projects, setProjects] = useState([
+		{ title: 'To Do List', body: 'lorem ipsum...', date: '09/21', id: 1 },
+		{
+			title: 'Expense Manager',
+			body: 'lorem ipsum...',
+			date: '09/21',
+			id: 2,
+		},
+	]);
+
+
+	useEffect(() => {
+		console.log('use effect ran');
+		console.log(projects);
+	}, []);
 
 	return (
 		<div className='home'>
@@ -21,6 +37,6 @@ function Home() {
 			</p>
 		</div>
 	);
-}
+};
 
-export default Home;
+export default HomePage;

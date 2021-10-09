@@ -1,26 +1,32 @@
+import React from 'react';
 import './App.scss';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './components/Home/Home';
-import Tools from './components/tools/Tools';
-import TaskManager from './components/tools/toDoList/TaskManager';
-import ExpenseTracker from './components/tools/expense/ExpenseTracker';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import HomePage from './components/pages/HomePage';
+import GamePage from './components/pages/GamePage';
+import ToolPage from './components/pages/ToolPage';
+import ContactPage from './components/pages/ContactPage';
+import { ErrorPage } from './components/pages/ErrorPage';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link,
+	Redirect,
+} from 'react-router-dom';
 
-function App() {
+export default function App() {
 	return (
 		<Router>
 			<div className='wrapper'>
 				<Navbar />
 				<div className='content'>
 					<Switch>
-						<Route path='/'>
-							<Home />
-							<Tools />
-						</Route>
-						<Route path='/tools'>
-							<Tools />
-						</Route>
+						<Route exact path='/' component={HomePage} />
+						<Route path='/tools' component={ToolPage} />
+						<Route path='/games' component={GamePage} />
+						<Route path='/contact' component={ContactPage} />
+						<Route component={ErrorPage} />
 					</Switch>
 				</div>
 				<Footer />
@@ -28,5 +34,3 @@ function App() {
 		</Router>
 	);
 }
-
-export default App;
