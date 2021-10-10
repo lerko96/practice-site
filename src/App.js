@@ -9,11 +9,16 @@ import ContactPage from './components/pages/ContactPage';
 import { ErrorPage } from './components/pages/ErrorPage';
 import {
 	BrowserRouter as Router,
-	Switch,
 	Route,
+	Switch,
 	Link,
+	useParams,
+	useRouteMatch,
 	Redirect,
 } from 'react-router-dom';
+import BlogPage from './components/pages/BlogPage';
+import BlogDetails from './components/blogs/BlogDetails';
+import CreateBlog from './components/blogs/CreateBlog';
 
 export default function App() {
 	return (
@@ -23,6 +28,16 @@ export default function App() {
 				<div className='content'>
 					<Switch>
 						<Route exact path='/' component={HomePage} />
+						<Route exact path='/blogs' component={BlogPage} />
+						<Route
+							exact
+							path='/blogs/create'
+							component={CreateBlog}
+							title='create a blog'
+						/>
+						<Route path='/blogs/:id'>
+							<BlogDetails />
+						</Route>
 						<Route path='/tools' component={ToolPage} />
 						<Route path='/games' component={GamePage} />
 						<Route path='/contact' component={ContactPage} />

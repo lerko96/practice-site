@@ -20,10 +20,7 @@ const HomePage = () => {
 	]);
 
 
-	useEffect(() => {
-		console.log('use effect ran');
-		console.log(projects);
-	}, []);
+
 
 	return (
 		<div className='home'>

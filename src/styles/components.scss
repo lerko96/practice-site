@@ -10,7 +10,6 @@
 		padding: 1rem 2.5rem;
 		font-size: 20px;
 
-
 		&:hover {
 			color: aquamarine;
 		}
@@ -43,11 +42,73 @@
 	width: 100%;
 }
 
+.blog-page {
+	border: 1px solid green;
+	.blog-list {
+		border: 1px solid blue;
+	}
+	.blog-preview {
+		border: 1px solid orange;
+		max-width: 400px;
+		margin: 0 auto;
+		text-align: left;
+		padding: 10px 16px;
+	}
+}
+
+.create-blog {
+	max-width: 400px;
+	margin: 0 auto;
+	text-align: center;
+
+	label {
+		text-align: left;
+		display: block;
+	}
+	h2 {
+		font-size: 20px;
+		color: red;
+		margin-bottom: 30px;
+	}
+	input,
+	textarea,
+	select {
+		width: 100%;
+		padding: 6px 10px;
+		margin: 10px 0;
+		border: 1px solid #ddd;
+		box-sizing: border-box;
+		display: block;
+	}
+	button {
+		background: red;
+		color: #fff;
+		border: 0;
+		padding: 8px;
+		border-radius: 8px;
+		cursor: pointer;
+	}
+}
+
+.tool-list {
+	@include respond-above(md) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		gap: 15px 15px;
+		grid-auto-flow: row;
+		grid-template-areas:
+			'. . .'
+			'. . .'
+			'. . .';
+	}
+}
+
 .taskManager {
-	width: 500px;
+	max-width: 500px;
 	margin: 30px auto;
 	overflow: auto;
-	min-height: 300px;
+	max-height: 300px;
 	border: 1px solid steelblue;
 	padding: 30px;
 	border-radius: 5px;
@@ -120,4 +181,3 @@
 	h2 {
 	}
 }
-
