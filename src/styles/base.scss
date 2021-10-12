@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 
 html,
@@ -23,6 +24,11 @@ body {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	background-image: url('../images/bg.jpg');
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-size: cover;
+	min-height: 100vh;
 }
 
 h1 {
