@@ -3,6 +3,7 @@ import Weather from '../tools/weather/Weather.js';
 import ProjectList from '../ProjectList';
 import ToolsList from './ToolPage';
 import Search from '../Search.js';
+import Clock from '../tools/Clock.js';
 
 const HomePage = () => {
 	const [name, setName] = useState('lerko');
@@ -11,12 +12,9 @@ const HomePage = () => {
 		setName('luigi');
 	};
 
-
-
-	// const [lat, setLat] = useState([]);
-	// const [long, setLong] = useState([]);
-	// const [quote, setQuote] = useState([]);
-	// const [data, setData] = useState([]);
+	const [lat, setLat] = useState([]);
+	const [long, setLong] = useState([]);
+	const [data, setData] = useState([]);
 
 	// useEffect(() => {
 	// 	const fetchData = async () => {
@@ -25,40 +23,35 @@ const HomePage = () => {
 	// 			setLong(position.coords.longitude);
 	// 		});
 
-	// 		// await fetch('https://quotes.rest/qod')
-	// 		// 	.then((res) => res.json())
-	// 		// 	.then((resultQuote) => {
-	// 		// 		setData(resultQuote);
-	// 		// 		console.log(resultQuote);
-	// 		// 	});
-
 	// 		await fetch(
 	// 			`${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
 	// 		)
 	// 			.then((res) => res.json())
+
 	// 			.then((result) => {
 	// 				setData(result);
 	// 				console.log(result);
 	// 			});
 	// 	};
-	// 	fetchData();
+	// 	fetchData().catch(console.error);
 	// }, [lat, long]);
 
 	return (
 		<div className='home'>
-			<div className='homer-header'>
-				<h1>welcome to the internet {name}</h1>
-				{/* <button onClick={handleClick}>Click me</button> */}
+			<h1>welcome to the internet {name}</h1>
+			{/* <button onClick={handleClick}>Click me</button> */}
+			<div className='header'>
 				<div className='weather-container'>
-					{/* {typeof data.main != 'undefined' ? (
-						<Weather weatherData={data} />
-					) : (
-						<div></div>
-					)} */}
+					{data.main && <Weather weatherData={data} />}
+					<p>72</p>
+					<p>high</p>
+					<p>low</p>
+					<p>desc</p>
+					<p>humidity</p>
 				</div>
+				<Clock />
 			</div>
-
-				<Search />
+			<Search />
 		</div>
 	);
 };

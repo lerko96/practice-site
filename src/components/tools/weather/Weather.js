@@ -2,20 +2,17 @@ import React from 'react';
 
 const Weather = ({ weatherData }) => {
 	return (
-		<div className='weather-tool'>
+		<div className='weather-comp'>
 			<div className='header'>{weatherData.name}</div>
-			<p>Temprature: {weatherData.main.temp} &deg;C</p>
 			<p>
-				Sunrise:{' '}
-				{new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString(
-					'en-IN'
-				)}
+				Temprature: {(weatherData.main.temp * 1.8 + 32).toFixed(1)}{' '}
+				&deg;F
 			</p>
 			<p>
-				Sunset:{' '}
-				{new Date(weatherData.sys.sunset * 1000).toLocaleTimeString(
-					'en-IN'
-				)}
+				High: {(weatherData.main.temp_max * 1.8 + 32).toFixed(1)} &deg;F
+			</p>
+			<p>
+				Low: {(weatherData.main.temp_min * 1.8 + 32).toFixed(1)} &deg;F
 			</p>
 			<p>Description: {weatherData.weather[0].main}</p>
 			<p>Humidity: {weatherData.main.humidity} %</p>

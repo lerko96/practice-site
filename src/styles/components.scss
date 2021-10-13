@@ -30,6 +30,29 @@
 	}
 }
 
+.home {
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.weather-container {
+
+}
+
+.clock-comp {
+	font-size: 32px;
+	color: #fff;
+	border: 1px solid red;
+	// display: flex;
+	// justify-content: flex-end;
+	// padding-right: 50px;
+}
+
 .search-container {
 	// border: 2px solid green;
 	padding: 2rem;
