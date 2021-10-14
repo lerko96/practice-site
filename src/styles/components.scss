@@ -36,18 +36,37 @@
 }
 
 .header {
+	height: 150px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .weather-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	p {
+		font-size: 44px;
+	}
+}
 
+.weather-comp {
+	border: 1px solid blue;
+	align-items: center;
+	display: flex;
+	width: 300px;
 }
 
 .clock-comp {
-	font-size: 32px;
+	font-size: 44px;
 	color: #fff;
 	border: 1px solid red;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	width: 300px;
+
 	// display: flex;
 	// justify-content: flex-end;
 	// padding-right: 50px;
