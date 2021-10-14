@@ -32,10 +32,10 @@ const TaskManager = ({ title }) => {
 		return data;
 	};
 
-	const onAdd = () => {
-		setShowAddTask(!showAddTask);
-		const showAdd = { showAddTask };
-	};
+	// const onAdd = () => {
+	// 	setShowAddTask(!showAddTask);
+	// 	const showAdd = { showAddTask };
+	// };
 
 	//Add Task
 	const addTask = async (task) => {
