@@ -1,23 +1,31 @@
 import React from 'react';
+class Weather extends React.Component {
+	constructor(props) {
+		super(props);
 
-const Weather = ({ weatherData }) => {
-	return (
-		<div className='weather-comp'>
-			<div className='header'>{weatherData.name}</div>
-			<p>
-				Temprature: {(weatherData.main.temp * 1.8 + 32).toFixed(1)}{' '}
-				&deg;F
-			</p>
-			<p>
-				High: {(weatherData.main.temp_max * 1.8 + 32).toFixed(1)} &deg;F
-			</p>
-			<p>
-				Low: {(weatherData.main.temp_min * 1.8 + 32).toFixed(1)} &deg;F
-			</p>
-			<p>Description: {weatherData.weather[0].main}</p>
-			<p>Humidity: {weatherData.main.humidity} %</p>
-		</div>
-	);
-};
+		this.state = {
+			items: [],
+			DataisLoaded: false,
+		};
+	}
 
-export default Weather;
+	componentDidMount() {
+		// useEffect(() => {
+		// 	const fetchData = async () => {
+		// 		navigator.geolocation.getCurrentPosition(function (position) {
+		// 			setLat(position.coords.latitude);
+		// 			setLong(position.coords.longitude);
+		// 		});
+		// 		await fetch(
+		// 			`${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
+		// 		)
+		// 			.then((res) => res.json())
+		// 			.then((result) => {
+		// 				setData(result);
+		// 				console.log(result);
+		// 			});
+		// 	};
+		// 	fetchData().catch(console.error);
+		// }, [lat, long]);
+	}
+}

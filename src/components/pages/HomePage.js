@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Weather from '../tools/weather/Weather.js';
+import WeatherData from '../tools/weather/WeatherData.js';
 import ProjectList from '../ProjectList';
 import ToolsList from './ToolPage';
 import Search from '../Search.js';
@@ -15,26 +15,28 @@ const HomePage = () => {
 	const [lat, setLat] = useState([]);
 	const [long, setLong] = useState([]);
 	const [data, setData] = useState([]);
+	
+	
 
-	// useEffect(() => {
-	// 	const fetchData = async () => {
-	// 		navigator.geolocation.getCurrentPosition(function (position) {
-	// 			setLat(position.coords.latitude);
-	// 			setLong(position.coords.longitude);
-	// 		});
+	useEffect(() => {
+		const fetchData = async () => {
+			navigator.geolocation.getCurrentPosition(function (position) {
+				setLat(position.coords.latitude);
+				setLong(position.coords.longitude);
+			});
 
-	// 		await fetch(
-	// 			`${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
-	// 		)
-	// 			.then((res) => res.json())
+			await fetch(
+				`${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
+			)
+				.then((res) => res.json())
 
-	// 			.then((result) => {
-	// 				setData(result);
-	// 				console.log(result);
-	// 			});
-	// 	};
-	// 	fetchData().catch(console.error);
-	// }, [lat, long]);
+				.then((result) => {
+					setData(result);
+					console.log(result);
+				});
+		};
+		fetchData().catch(console.error);
+	}, [lat, long]);
 
 	return (
 		<div className='home'>
@@ -42,7 +44,7 @@ const HomePage = () => {
 			{/* <button onClick={handleClick}>Click me</button> */}
 			<div className='header'>
 				<div className='weather-container'>
-					{data.main && <Weather weatherData={data} />}
+					{data.main && <WeatherData weatherData={data} />}
 					<p>72</p>
 					<p>high</p>
 					<p>low</p>
