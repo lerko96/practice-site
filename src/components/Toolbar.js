@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { FaCalculator, FaClipboardList, FaStickyNote, FaSearch } from 'react-icons/fa';
 
 import TaskManager from './tools/task/TaskManager';
 import Search from './Search';
@@ -12,29 +13,30 @@ const Toolbar = () => {
 	return (
 		<div className='tool-container'>
 			<div className='toolbar-wrapper'>
-				<button
+				<FaClipboardList
+					className='tool-icon'
 					onClick={() => {
 						setTool(<TaskManager />);
 						scrollToRef.current.scrollIntoView();
 					}}
-				>
-					Task
-				</button>
+				/>
 
-				<button
+				<FaSearch
+				className='tool-icon'
 					onClick={() => {
 						setTool(<Search />);
 						scrollToRef.current.scrollIntoView();
 					}}
-				>
-					Search
-				</button>
-				<button onClick={() => setTool(<Calculator />)}>
-					Calculator
-				</button>
-				<button onClick={() => setTool(<Notes />)}>
-					Notes
-				</button>
+				/>
+				<FaCalculator
+					className='tool-icon'
+					onClick={() => setTool(<Calculator />)}
+				/>
+
+				<FaStickyNote
+					className='tool-icon'
+					onClick={() => setTool(<Notes />)}
+				/>
 			</div>
 			<div className='tool-wrapper' ref={scrollToRef}>
 				{tool}
