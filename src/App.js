@@ -19,6 +19,7 @@ import {
 import BlogPage from './components/pages/BlogPage';
 import BlogDetails from './components/blogs/BlogDetails';
 import CreateBlog from './components/blogs/CreateBlog';
+import TaskManager from './components/tools/toDoList/TaskManager';
 
 export default function App() {
 	return (
@@ -28,6 +29,7 @@ export default function App() {
 				<div className='content'>
 					<Switch>
 						<Route exact path='/' component={HomePage} />
+						<Route path='/notes' component={TaskManager} />
 						<Route exact path='/blogs' component={BlogPage} />
 						<Route
 							exact
