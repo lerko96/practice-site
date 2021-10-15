@@ -7,55 +7,55 @@ import Search from '../Search.js';
 import Clock from '../tools/Clock.js';
 import Weather from '../tools/weather/Weather.js';
 import TaskManager from '../tools/toDoList/TaskManager.js';
+import Toolbar  from '../Toolbar.js';
 // import Toolbar from '../Toolbar.js';
 
 const HomePage = () => {
 	const [name, setName] = useState('lerko');
-	const [tool, setTool] = useState('')
+	const [tool, setTool] = useState('');
 	// const [tool2, setTool2] = useState()
 
 	const handleClick = () => {
 		setName('luigi');
 	};
 
-
-
-
-
 	// function Toolbar(props) {
 	// 	return <button>{props.name}</button>;
 	// }
-
 
 	//handle hover effect
 	// const [isShown, setIsShown] = useState(false);
 
 	return (
 		<div
-			className='home'
+			className='home-container'
 			//h handle hover
 			// onMouseEnter={() => setIsShown(true)}
 			// onMouseLeave={() => setIsShown(false)}
 		>
-			<h1>welcome to the internet {name}</h1>
+			<header>
+				<h1>welcome to the internet {name}</h1>
+			</header>
 			{/* handle name change */}
 			{/* <button onClick={handleClick}>Click me</button> */}
 
 			{/* hover effect */}
 			{/* {isShown && ( */}
-			<div className='header'>
+			<div className='top-comp'>
 				{/* <Weather /> */}
 				<Clock />
 			</div>
+			<div className='search-wrapper'>
+				<Search />
+			</div>
 			{/* )} */}
-			<Search />
 
-
-			<div className='toolbar'>
-				<button onClick={() => setTool(<TaskManager />)}>notes app</button>
+				< Toolbar />
+			{/* <div className='toolbar'>
+				<button onClick={() => setTool(<TaskManager />)}>notes</button>
 				<button onClick={() => setTool(<Search />)}>search app</button>
 			</div>
-			<div>{tool}</div>
+			<div className='tool-comp'>{tool}</div> */}
 		</div>
 	);
 };

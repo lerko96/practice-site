@@ -1,9 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
+import TaskManager from './tools/toDoList/TaskManager';
+import Search from './Search';
 
-export const Toolbar = () => {
-	const showToolBar = true;
+const Toolbar = () => {
+	const [tool, setTool] = useState('');
 
-	return <button></button>;
+	return (
+		<>
+			<div className='toolbar'>
+				<button onClick={() => setTool(<TaskManager />)}>notes</button>
+				<button onClick={() => setTool(<Search />)}>search</button>
+			</div>
+			<div className='tool-comp'>{tool}</div>
+		</>
+	);
 };
 
-
+export default Toolbar;

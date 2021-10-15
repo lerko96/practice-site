@@ -30,12 +30,13 @@
 	}
 }
 
-.home {
+.home-container {
+	border: 5px solid blue;
 	display: flex;
 	flex-direction: column;
 }
 
-.header {
+.top-comp {
 	height: 150px;
 	display: flex;
 	justify-content: center;
