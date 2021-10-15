@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
 
 import TaskManager from './tools/toDoList/TaskManager';
 import Search from './Search';
+import Calculator from './tools/calculator/Calculator';
 
 const Toolbar = () => {
 	const [tool, setTool] = useState('');
@@ -28,6 +28,7 @@ const Toolbar = () => {
 				>
 					search
 				</button>
+				<button onClick={() => setTool(<Calculator />)}>Calc</button>
 			</div>
 			<div className='tool-wrapper' ref={scrollToRef}>
 				{tool}

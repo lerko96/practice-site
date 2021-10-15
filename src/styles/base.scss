@@ -32,27 +32,46 @@ body {
 	min-height: 100vh;
 }
 
-.home-container {
+.home-wrapper {
 	display: flex;
 	flex-direction: column;
-}
-
-.home-wrapper {
-	border: 5px solid blue;
-	height: 66vh;
+	border: 4px solid blue;
+	// height: 66vh;
 }
 
 .top-container {
+	border: 3px solid green;
 	height: 150px;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 }
 
 .tool-container {
 	// min-height: 20vh;
+	.toolbar-wrapper {
+		border: 2px solid orange;
+	}
+	.tool-wrapper {
+		border: 2px solid red;
+	}
 }
+
 .footer {
-	// min-height: 80vh;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 0px;
+	.foot-links {
+		a {
+			padding: 20px;
+
+			&:hover {
+				color: blue;
+				text-decoration: solid;
+			}
+		}
+	}
 }
 
 h1 {
@@ -61,4 +80,7 @@ h1 {
 
 a {
 	text-decoration: none;
+	&:visited {
+		color: inherit;
+	}
 }
