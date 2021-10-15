@@ -1,0 +1,15 @@
+@media (prefers-reduced-motion: no-preference) {
+	.error-page {
+		animation: error-spin infinite 2s linear;
+	}
+}
+
+@keyframes error-spin {
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(360deg);
+	}
+	
+}
