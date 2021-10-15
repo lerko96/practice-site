@@ -24,7 +24,7 @@ body {
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	text-align: center;
+	// text-align: center;
 	background-image: url('../images/bg.jpg');
 	background-repeat: no-repeat;
 	background-position-x: center;
@@ -50,6 +50,7 @@ body {
 	// min-height: 20vh;
 	.toolbar-wrapper {
 		border: 2px solid orange;
+		padding: 20px;
 	}
 	.tool-wrapper {
 		border: 2px solid red;

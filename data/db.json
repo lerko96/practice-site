@@ -62,7 +62,7 @@
     {
       "text": "take test",
       "day": "friday",
-      "reminder": true,
+      "reminder": false,
       "id": 4
     }
   ]
