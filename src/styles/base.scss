@@ -32,6 +32,29 @@ body {
 	min-height: 100vh;
 }
 
+.home-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.home-wrapper {
+	border: 5px solid blue;
+	height: 66vh;
+}
+
+.top-container {
+	height: 150px;
+	display: flex;
+	justify-content: center;
+}
+
+.tool-container {
+	// min-height: 20vh;
+}
+.footer {
+	// min-height: 80vh;
+}
+
 h1 {
 	font-family: 'Press Start 2P', cursive;
 }

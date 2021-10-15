@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Calculator = () => {
-    const []
+	const [count, setCount] = useState(0);
 
-    return (
-        <div>
-            
-        </div>
-    )
-}
+    function decremementCount() {
+        setCount(prevCount => prevCount - 1)
+    }
 
-export default Calculator
+	return <div></div>;
+};
+
+export default Calculator;

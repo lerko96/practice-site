@@ -9,7 +9,7 @@ const Search = () => {
 	};
 
 	return (
-		<div className='search-container'>
+		<div className='search-wrapper'>
 			<div className='search-bar'>
 				<form>
 					<button id='search' onClick={handleSearch}>

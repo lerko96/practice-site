@@ -27,7 +27,7 @@ const Weather = () => {
 	}, [lat, long]);
 
 	return (
-		<div className='weather-comp'>
+		<div className='weather-container'>
 			{data.main && <WeatherData weatherData={data} />}
 		</div>
 	);

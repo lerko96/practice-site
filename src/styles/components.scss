@@ -30,19 +30,16 @@
 	}
 }
 
-.home-container {
-	border: 5px solid blue;
-	display: flex;
-	flex-direction: column;
-}
 
-.top-comp {
-	height: 150px;
-	display: flex;
-	justify-content: center;
-}
 
 .weather-container {
+	border: 1px solid blue;
+	align-items: center;
+	display: flex;
+	width: 300px;
+}
+
+.weather-wrapper {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -52,14 +49,9 @@
 	}
 }
 
-.weather-comp {
-	border: 1px solid blue;
-	align-items: center;
-	display: flex;
-	width: 300px;
-}
 
-.clock-comp {
+
+.clock-wrapper {
 	font-size: 44px;
 	color: #fff;
 	border: 1px solid red;
@@ -73,7 +65,7 @@
 	// padding-right: 50px;
 }
 
-.search-container {
+.search-wrapper {
 	// border: 2px solid green;
 	padding: 2rem;
 }

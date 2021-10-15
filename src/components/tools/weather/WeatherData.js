@@ -5,7 +5,7 @@ const Weather = ({ weatherData }) => {
 	// var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
 
 	return (
-		<div className='weather-container'>
+		<div className='weather-wrapper'>
 			<p>{(weatherData.main.temp * 1.8 + 32).toFixed(1)} &deg;F</p>
 			<img
 				src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
