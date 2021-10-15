@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
 
-import TaskManager from './tools/toDoList/TaskManager';
+import TaskManager from './tools/task/TaskManager';
 import Search from './Search';
 import Calculator from './tools/calculator/Calculator';
+import Notes from './tools/notes/Notes';
 
 const Toolbar = () => {
 	const [tool, setTool] = useState('');
@@ -17,7 +18,7 @@ const Toolbar = () => {
 						scrollToRef.current.scrollIntoView();
 					}}
 				>
-					notes
+					Task
 				</button>
 
 				<button
@@ -26,9 +27,14 @@ const Toolbar = () => {
 						scrollToRef.current.scrollIntoView();
 					}}
 				>
-					search
+					Search
 				</button>
-				<button onClick={() => setTool(<Calculator />)}>Calc</button>
+				<button onClick={() => setTool(<Calculator />)}>
+					Calculator
+				</button>
+				<button onClick={() => setTool(<Notes />)}>
+					Notes
+				</button>
 			</div>
 			<div className='tool-wrapper' ref={scrollToRef}>
 				{tool}
