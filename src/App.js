@@ -6,12 +6,11 @@ import ContactPage from './components/pages/ContactPage';
 import { ErrorPage } from './components/pages/ErrorPage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import car from './images/bg.jpg';
+import redMtn from './images/bg.jpg';
+import purpMtn from './images/bg2.jpg';
 
 export default function App() {
-	const [bgImg, setBgImg] = useState(`${car}`);
-
-
+	const [bgImg, setBgImg] = useState(`${redMtn}`);
 
 	const pageAccessedByReload =
 		(window.performance && window.performance.type === 1) ||
@@ -21,8 +20,10 @@ export default function App() {
 			.includes('reload');
 
 	useEffect(() => {
-		alert(pageAccessedByReload);
-		// setBgImg()
+		// alert(pageAccessedByReload);
+
+			// setBgImg();
+		
 	}, [pageAccessedByReload]);
 
 	return (
